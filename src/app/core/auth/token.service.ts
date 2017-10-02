@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class TokenService {
 
-  private readonly AUTH_INFO_KEY = 'hotelmanager-auth';
+  private readonly AUTH_INFO_KEY = 'starter-auth';
   private isValidTokenSubject = new Subject<boolean>();
 
   constructor() { }

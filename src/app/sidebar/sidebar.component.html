@@ -1,100 +1,34 @@
 <div class="sidebar-container">
 
   <md-list class="sidebar-list">
-    <h3 md-subheader>Reception</h3>
+    <h3 md-subheader>Section 1</h3>
     <md-list-item>
-      <button class="sidebar-button" md-button [routerLink]="['/' + ROUTES.BOOKINGS]" routerLinkActive="active">
+      <button class="sidebar-button" md-button [routerLink]="['/' + ROUTES.HOME]" routerLinkActive="active">
         <i class="hm-icon-booking sidebar-icon"></i>
-        <span i18n="@@bookings">Bookings</span>
+        <span>HOME</span>
       </button>
     </md-list-item>
 
     <md-divider></md-divider>
 
-    <md-list-item>
-      <button class="sidebar-button" md-button [routerLink]="['/' + ROUTES.ROOMS]" routerLinkActive="active">
-        <i class="hm-icon-room sidebar-icon"></i>
-        <span i18n="@@rooms">Rooms</span>
-      </button>
-    </md-list-item>
-
-    <md-divider></md-divider>
-
-    <md-list-item>
-      <button class="sidebar-button" md-button [routerLink]="['/' + ROUTES.BEACONS]" routerLinkActive="active">
-        <i class="hm-icon-beacon sidebar-icon"></i>
-        <span i18n="@@beacons">Beacons</span>
-      </button>
-    </md-list-item>
-
-    <md-divider></md-divider>
-
-    <h3 md-subheader>Manager</h3>
-    <md-list-item>
-      <button class="sidebar-button" md-button [routerLink]="['/' + ROUTES.REPORTS]" routerLinkActive="active">
-        <i class="hm-icon-reports sidebar-icon"></i>
-        Events & Reports
-      </button>
-    </md-list-item>
-
-    <md-divider></md-divider>
+    <h3 md-subheader>Section 2</h3>
 
     <md-list-item class="expansion-container">
       <md-expansion-panel [expanded]="true">
         <md-expansion-panel-header>
           <md-panel-title>
             <i class="hm-icon-management sidebar-icon"></i>
-            Management
+            Subsection
           </md-panel-title>
         </md-expansion-panel-header>
 
         <button class="sidebar-button management-button"
                 md-button
-                [routerLink]="['/' + ROUTES.DATES_AND_TIMES]"
+                [routerLink]="['/' + ROUTES.HOME]"
                 routerLinkActive="active">
-          Default dates and times
+          Home
         </button>
 
-        <button class="sidebar-button management-button"
-                md-button
-                [routerLink]="['/' + ROUTES.COMFORT_VALUES]"
-                routerLinkActive="active">
-          Comfort values
-        </button>
-
-        <button class="sidebar-button management-button"
-                md-button
-                [routerLink]="['/' + ROUTES.BEACONS_MAINTENANCE]"
-                routerLinkActive="active">
-          Beacons maintenance
-        </button>
-
-        <button class="sidebar-button management-button"
-                md-button
-                [routerLink]="['/' + ROUTES.AREA_ORGANIZATION]"
-                routerLinkActive="active">
-          Area organization
-        </button>
-
-        <button class="sidebar-button management-button"
-                md-button
-                [routerLink]="['/' + ROUTES.STAFF]"
-                routerLinkActive="active">
-          Staff
-        </button>
-
-        <button class="sidebar-button management-button"
-                md-button
-                [routerLink]="['/' + ROUTES.SUITES]"
-                routerLinkActive="active">Suites
-        </button>
-
-        <button class="sidebar-button management-button"
-                md-button
-                [routerLink]="['/' + ROUTES.ROLES]"
-                routerLinkActive="active">
-          Roles
-        </button>
       </md-expansion-panel>
 
     </md-list-item>

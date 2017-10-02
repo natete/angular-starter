@@ -1,0 +1,134 @@
+@import '~@angular/material/theming';
+@import '../variables';
+
+/**
+ * Common custom button styles.
+ */
+@mixin md-buttons-common-styles($theme) {
+
+  $accentPalette: map-get($theme, accent);
+  $warnPalette: map-get($theme, warn);
+  $primaryPalette: map-get($theme, primary);
+
+  button {
+
+    min-width: 88px;
+    border-radius: 4px;
+    font-weight: bold !important;
+
+    i {
+      font-size: 24px;
+    }
+
+    &.large {
+      height: 40px;
+      font-size: 15px !important;
+    }
+
+    &.medium {
+      height: $mediumElementHeight;
+      line-height: 30px;
+      font-size: 14px !important;
+    }
+
+    &.tiny {
+      height: 26px;
+      font-size: 13px !important;
+      line-height: 25px;
+    }
+
+    &.default {
+      background: mat-color($primaryPalette, default) !important;
+      color: mat-color($accentPalette, default) !important;
+      font-weight: normal !important;
+
+      &.lighter {
+        color: mat-color($primaryPalette, default) !important;
+      }
+
+      &:hover {
+        color: mat-color($primaryPalette, default) !important;
+        background: mat-color($accentPalette, default) !important;
+      }
+
+      &:active {
+        color: mat-color($primaryPalette, default) !important;
+        background: mat-color($accentPalette, A100) !important;
+      }
+    }
+
+    &.ghost {
+      background: transparent;
+      color: mat-color($accentPalette, default) !important;
+      border: 1px solid mat-color($accentPalette, default) !important;
+
+      &.lighter {
+        color: mat-color($primaryPalette, default) !important;
+      }
+
+      &:hover {
+        color: mat-color($primaryPalette, default) !important;
+        background: mat-color($accentPalette, default) !important;
+      }
+
+      &:active {
+        color: mat-color($primaryPalette, default) !important;
+        background: mat-color($accentPalette, A100) !important;
+      }
+    }
+
+    &.primary {
+      background: mat-color($accentPalette, default) !important;
+      color: mat-color($primaryPalette, default) !important;
+
+      &:hover {
+        background: mat-color($accentPalette, A100) !important;
+      }
+
+      &:active {
+        background: mat-color($accentPalette, 900) !important;
+      }
+
+    }
+
+    &.link {
+      background: transparent;
+      border: none;
+      text-decoration: underline;
+      color: mat-color($primaryPalette, 900) !important;
+
+      &.primary {
+        color: mat-color($accentPalette, default) !important;
+        background: transparent !important;
+      }
+
+      &:hover {
+        color: mat-color($accentPalette, default) !important;
+        background: transparent !important;
+      }
+
+      &:active {
+        color: mat-color($accentPalette, A100) !important;
+        background: transparent !important;
+      }
+    }
+
+    &.mat-sort-header-button {
+      font-size: 12px !important;
+      text-transform: uppercase !important;
+      font-weight: bolder !important;
+      color: mat-color($primaryPalette, A700, 0.4);
+    }
+
+    &[disabled] {
+      background: mat-color($primaryPalette, 100) !important;
+      color: mat-color($primaryPalette, A700, 0.3) !important;
+    }
+
+    &.action {
+      background: transparent;
+      border: none;
+      color: mat-color($accentPalette, default) !important;
+    }
+  }
+}

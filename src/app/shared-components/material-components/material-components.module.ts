@@ -1,62 +1,37 @@
 import { NgModule } from '@angular/core';
 import {
   DateAdapter,
-  MdAutocompleteModule,
   MdButtonModule,
-  MdCheckboxModule,
-  MdChipsModule,
-  MdDatepickerModule,
   MdDialogModule,
   MdExpansionModule,
-  MdGridListModule,
+  MdIconModule,
   MdInputModule,
   MdListModule,
-  MdMenuModule,
-  MdRadioModule,
-  MdSelectModule,
-  MdSliderModule
+  MdMenuModule
 } from '@angular/material';
 import { SimpleDateAdapter } from './simple-date-adapter';
-import { DragDropModule, TreeModule } from 'primeng/primeng';
+import { DragDropModule } from 'primeng/primeng';
 
 @NgModule({
   imports: [
     DragDropModule,
-    MdAutocompleteModule,
     MdButtonModule,
-    MdCheckboxModule,
-    MdChipsModule,
-    MdDatepickerModule,
     MdDialogModule,
     MdExpansionModule,
-    MdGridListModule,
-    // MdIconModule,
+    MdIconModule,
     MdInputModule,
     MdListModule,
-    MdMenuModule,
-    MdRadioModule,
-    MdSelectModule,
-    MdSliderModule,
-    TreeModule
+    MdMenuModule
   ],
   exports: [
     DragDropModule,
-    MdAutocompleteModule,
     MdButtonModule,
-    MdCheckboxModule,
-    MdChipsModule,
-    MdDatepickerModule,
     MdDialogModule,
     MdExpansionModule,
-    MdGridListModule,
-    // MdIconModule,
+    MdIconModule,
     MdInputModule,
     MdListModule,
-    MdMenuModule,
-    MdRadioModule,
-    MdSelectModule,
-    MdSliderModule,
-    TreeModule
+    MdMenuModule
   ],
   providers: [
     { provide: DateAdapter, useClass: SimpleDateAdapter }
