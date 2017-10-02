@@ -1,0 +1,3 @@
+export const CONFIG_CONSTANTS = {
+  TABLE_NUMBER_OF_RESULTS: 10
+};

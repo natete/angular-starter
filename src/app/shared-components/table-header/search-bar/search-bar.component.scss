@@ -1,0 +1,22 @@
+.search-container {
+  height: 100%;
+  position: relative;
+
+  .search-input {
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    padding: 5px 30px 5px 5px;
+    font-size: 0.9em;
+    border-width: 1px;
+  }
+
+  .icon-input-search {
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+}

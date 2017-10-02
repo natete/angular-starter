@@ -1,0 +1,57 @@
+@import '../../assets/scss/variables.scss';
+
+.header-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand {
+  height: auto;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .siemens-logo {
+    width: 123px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  .line {
+    height: 20px;
+    margin: 0 0.5em;
+  }
+
+  .second-title {
+    font-size: 0.8em;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    line-height: 1em;
+  }
+}
+
+.header-content-container {
+  height: $headerHeight;
+  width: calc(100% - 250px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 15px;
+
+  .new-checkin-button {
+    border-radius: 5px;
+    vertical-align: bottom;
+    margin-right: 15px;
+  }
+
+  .header-buttons-container {
+    float: right;
+    margin-right: 10px;
+
+    .header-button {
+      min-width: 60px;
+    }
+  }
+}

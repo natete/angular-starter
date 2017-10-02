@@ -1,0 +1,49 @@
+@import '../../../assets/scss/variables';
+
+.header-container {
+  text-align: right;
+  padding: 15px 20px;
+  min-height: $mediumElementHeight;
+  display: flex;
+  justify-content: space-between;
+
+  .results-counter-container {
+    float: left;
+    line-height: 32px;
+  }
+
+  app-search-bar {
+    float: right;
+    margin-right: 15px;
+  }
+
+  .criteria-selector-container {
+    display: inline-block;
+
+    .filter-label {
+      font-size: 14px;
+    }
+
+    .filter-select {
+      height: $mediumElementHeight;
+      margin-left: 15px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border-radius: 5px;
+      padding: 5px 35px 5px 10px;
+      font-size: 14px;
+      background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat 90% 50%;
+    }
+  }
+
+  .search-bar-container {
+    width: 20em;
+    height: 32px;
+    display: inline-block;
+    vertical-align: bottom;
+
+    app-search-bar {
+      height: 100%;
+    }
+  }
+}

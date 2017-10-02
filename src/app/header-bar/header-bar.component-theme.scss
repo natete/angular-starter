@@ -1,0 +1,26 @@
+@import '~@angular/material/theming';
+
+@mixin header-bar-component($theme) {
+
+  $primaryPalette: map-get($theme, primary);
+  $accentPalette: map-get($theme, accent);
+
+  .brand {
+    color: mat-color($primaryPalette, default);
+    background-color: mat-color($primaryPalette, 800);
+
+    .line {
+      border: solid 1px mat-color($primaryPalette, 100, 0.2);
+    }
+  }
+
+  .header-content-container {
+    background-color: mat-color($primaryPalette, 900);
+
+    .header-buttons-container {
+      .header-button {
+        color: mat-color($primaryPalette, 100, 0.5);
+      }
+    }
+  }
+}

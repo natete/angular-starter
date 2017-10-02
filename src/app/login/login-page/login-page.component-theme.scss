@@ -1,0 +1,27 @@
+@import '~@angular/material/theming';
+
+@mixin login-page-component($theme) {
+
+  $primaryPalette: map-get($theme, primary);
+  $accentPalette: map-get($theme, accent);
+
+  .main-container {
+    background-color: mat-color($primaryPalette, 100);
+  }
+
+  .login-header{
+    background-color: mat-color($primaryPalette, 900);
+
+    .line{
+      border-left: solid 1px mat-color($primaryPalette, 700);
+    }
+
+    .second-title{
+      color: mat-color($primaryPalette, 100);
+    }
+
+    .tittle-right{
+      color: mat-color($primaryPalette, 100);
+    }
+  }
+}

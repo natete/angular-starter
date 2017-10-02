@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+
+@mixin base-table-component($theme) {
+
+  $primaryPalette: map-get($theme, primary);
+
+  .table-container {
+    background-color: mat-color($primaryPalette, 100);
+  }
+
+}

@@ -1,0 +1,31 @@
+@import '../../assets/scss/variables.scss';
+
+.container-wrapper {
+  // TODO use variables
+  position: relative;
+
+  app-header-bar {
+    position: fixed;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    z-index: 40;
+  }
+
+  app-sidebar {
+    // TODO use variables
+    position: fixed;
+    top: 0;
+    margin-top: $headerHeight;
+    left: 5%;
+    z-index: 40;
+  }
+
+  .content-container {
+    margin-top: $headerHeight;
+    position: absolute;
+    left: calc(5% + 250px);
+    right: 5%;
+    height: calc(100vh - #{$headerHeight});
+  }
+}

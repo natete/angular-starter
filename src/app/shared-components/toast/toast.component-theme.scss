@@ -1,0 +1,25 @@
+@import '../../../../node_modules/@angular/material/theming';
+
+@mixin toast-component($theme) {
+
+  $warnPalette: map-get($theme, warn);
+
+  .ui-growl-message-success {
+    background-color: mat-color($warnPalette, A100);
+  }
+
+  .ui-growl-message-warn {
+    background-color: mat-color($warnPalette, A200);
+  }
+
+  .ui-growl-message-error {
+    background-color: mat-color($warnPalette, A400);
+  }
+
+  .ui-growl-message-info {
+    background-color: mat-color($warnPalette, A700);
+  }
+
+}
+
+

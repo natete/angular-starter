@@ -1,0 +1,30 @@
+<div class="header-container">
+
+  <div class="brand">
+    <!-- TODO change this for an icon -->
+    <img src="/assets/img/siemens-logo.svg" class="siemens-logo">
+    <div class="line"></div>
+    <div class="second-title">
+      <p>HOTEL</p>
+      <p>MANAGER</p>
+    </div>
+  </div>
+
+  <div class="header-content-container">
+
+    <!--<app-search-bar (onSearchTermChange)="handleNewSearchTerm($event)"></app-search-bar>-->
+
+    <div class="header-buttons-container">
+      <button md-button i18n="New checkin or booking button@@newCheckinButton"
+              [routerLink]="['/bookings/checkin']"
+              class="new-checkin-button ghost medium lighter">
+        <b>New Check-in</b>
+      </button>
+
+      <app-inbox class="header-button" [numberOfMessages]="4"></app-inbox>
+    </div>
+  </div>
+
+</div>
+
+<app-toast></app-toast>

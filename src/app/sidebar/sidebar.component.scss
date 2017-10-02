@@ -1,0 +1,75 @@
+@import '../../assets/scss/variables.scss';
+
+.sidebar-container {
+  box-sizing: border-box;
+  // TODO use variables
+  padding-top: 0.5em;
+  width: 250px;
+  height: calc(100vh - #{$headerHeight});
+  box-shadow: 2px 0 3px gainsboro;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h3[md-subheader] {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    padding-left: 24px;
+    font-weight: 500;
+  }
+
+  .sidebar-button {
+    padding-left: 23px;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    height: 3.5em;
+    line-height: 50%;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    font-weight: normal !important;
+    border-radius: 0 !important;
+    letter-spacing: 0.4px;
+
+    &.active {
+      padding-left: 19px;
+      color: #00c2cc;
+    }
+  }
+
+  .sidebar-icon {
+    font-size: 2em;
+    margin-right: 15px;
+    line-height: 0.8em;
+  }
+
+  md-expansion-panel {
+    width: 100%;
+    box-shadow: none;
+
+    md-panel-title {
+      line-height: 24px;
+    }
+
+    .management-button {
+      padding-left: 64px;
+      letter-spacing: 0;
+      font-size: 14px;
+
+      &.active {
+        padding-left: 60px;
+      }
+    }
+  }
+
+  .logout-button {
+    text-align: center;
+    min-height: 3.5em;
+
+    .icon {
+      float: right;
+    }
+  }
+}

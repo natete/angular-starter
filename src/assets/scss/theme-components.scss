@@ -1,0 +1,12 @@
+@import 'common';
+@import '../../app/header-bar/header-bar.component-theme';
+@import '../../app/header-bar/inbox/inbox.component-theme';
+@import '../../app/sidebar/sidebar.component-theme';
+@import '../../app/login/login-page/login-page.component-theme';
+
+@mixin starter-components-theme($theme) {
+  @include header-bar-component($theme);
+  @include inbox-component($theme);
+  @include sidebar-component($theme);
+  @include login-page-component($theme);
+}

@@ -1,0 +1,49 @@
+
+.table-wrapper {
+  padding: 0;
+
+  .hidden {
+    display: none;
+  }
+
+  md-row {
+    cursor: pointer;
+  }
+
+  .mat-header-cell {
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    font-weight: bolder !important;
+    text-align: center;
+  }
+
+  .table-actions-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .table-action {
+    cursor: pointer;
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 1px;
+    margin-right: 1vw;
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    .icon {
+      font-size: 24px;
+    }
+  }
+
+  .empty-table-container {
+    padding: 15px;
+
+    .empty-table-message {
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.float-right {
+  float: right;
+}
+
+@mixin common-styles($theme) {
+
+  $primaryPalette: map-get($theme, primary);
+
+  body {
+    background-color: mat-color($primaryPalette, 100);
+  }
+}
+
+
+
+
+

@@ -1,0 +1,10 @@
+<form (submit)="search()" class="search-container">
+  <!--<div class="">-->
+    <input class="search-input primary-color-bg-800 primary-color-font"
+           placeholder="Search..."
+           name="searchTerm"
+           mdInput
+           [(ngModel)]="searchTerm">
+  <i class="hm-icon-search icon-input-search" mdSuffix (click)="search()"></i>
+  <!--</div>-->
+</form>

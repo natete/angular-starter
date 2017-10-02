@@ -1,0 +1,66 @@
+<div class="table-wrapper">
+
+  <div [class.hidden]="!data.data || data.data.length === 0">
+
+    <md-table #table [dataSource]="dataSource"
+              mdSort
+              [mdSortActive]="tableDefinition.baseSort"
+              [mdSortDirection]="tableDefinition.baseSortDirection"
+              mdSortDisableClear="true"
+              [ngClass]="tableDefinition.styleClasses">
+
+      <ng-container *ngFor="let column of tableDefinition.columns">
+
+        <ng-container *ngIf="column.isSortable; then sortableColumn else noSortableColumn"></ng-container>
+
+        <ng-template #sortableColumn>
+
+          <ng-container [cdkColumnDef]="column.definition">
+            <md-header-cell *cdkHeaderCellDef md-sort-header>{{column.header}}</md-header-cell>
+            <md-cell *cdkCellDef="let row">{{row[column.fieldName]}}</md-cell>
+          </ng-container>
+
+        </ng-template>
+        <ng-template #noSortableColumn>
+
+          <ng-container [cdkColumnDef]="column.definition" [ngSwitch]="column.type">
+            <md-header-cell *cdkHeaderCellDef>{{column.header}}</md-header-cell>
+            <md-cell *cdkCellDef="let row">
+
+              <div class="table-actions-container" *ngSwitchCase="'actions'">
+                <div *ngFor="let action of column.actions">
+                  <button class="table-action"
+                          (click)="executeAction($event, row, action.id)">
+                    <i *ngIf="action.icon" [ngClass]="action.icon" class="icon"></i>
+                  </button>
+                </div>
+              </div>
+
+              <span *ngSwitchDefault>{{row[column.fieldName]}}</span>
+
+            </md-cell>
+          </ng-container>
+
+        </ng-template>
+
+      </ng-container>
+
+
+      <md-header-row *cdkHeaderRowDef="tableDefinition.displayedColumns"></md-header-row>
+      <md-row *cdkRowDef="let row; columns: tableDefinition.displayedColumns;"
+              (click)="onRowSelected (row.id)"></md-row>
+    </md-table>
+
+    <md-paginator [length]="data.page.length"
+                  [pageSize]="data.page.pageSize"
+                  [pageIndex]="data.page.pageIndex"
+                  [pageSizeOptions]="[5, 10, 25, 100]">
+    </md-paginator>
+
+  </div>
+
+  <div class="empty-table-container" *ngIf="!data.data || data.data.length === 0">
+    <div class="empty-table-message">No {{dataName}} found.</div>
+  </div>
+
+</div>

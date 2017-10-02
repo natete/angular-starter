@@ -1,0 +1,4 @@
+export const ERROR_CODE_CONSTANTS = {
+  EXPIRED_TOKEN: 14,
+  UNAUTHORIZED: 401
+};

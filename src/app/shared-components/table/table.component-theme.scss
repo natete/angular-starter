@@ -1,0 +1,43 @@
+@import '~@angular/material/theming';
+
+@mixin table-component($theme) {
+
+  $primaryPalette: map-get($theme, primary);
+
+  .table-wrapper {
+    background-color: mat-color($primaryPalette, default);
+
+    .filter-label {
+      color: mat-color($primaryPalette, 200);
+    }
+
+    .filter-select {
+      color: mat-color($primaryPalette, 900);
+    }
+
+    md-header-row {
+      background-color: mat-color($primaryPalette, 50);
+    }
+
+    .mat-header-cell {
+      color: mat-color($primaryPalette, A700, 0.4);
+    }
+
+    .table-action {
+      color: mat-color($primaryPalette, 200) !important;
+
+      &:active {
+        background-color: mat-color($primaryPalette, A200) !important;
+        color: mat-color($primaryPalette, 500) !important;
+      }
+    }
+  }
+
+  .empty-table-container {
+
+    .empty-table-message {
+      background: mat-color($primaryPalette, 50);
+      color: mat-color($primaryPalette, 700, .3);
+    }
+  }
+}

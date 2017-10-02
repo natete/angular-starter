@@ -1,0 +1,123 @@
+@import '~@angular/material/theming';
+@import 'theme-components';
+
+@include mat-core();
+
+// Define base colors for each palette
+$base-primary-color: #FFFFFF;
+$base-accent-color: #00C2CC;
+$base-warn-color: #F0BF6E;
+
+// Define custom theme palettes
+
+$starter-primary-colors: (
+        50: #F7FAFC,
+        100: #EBF0F5,
+        200: #D3DBE6,
+        300: #FFFFFF,
+        400: #FFFFFF, // primary default
+        500: #67809F,
+        600: #67809F,
+        700: #2C3E50,
+        800: #2C3E50,
+        900: #1B2732,
+        A100: #009999,
+        A200: #D3DBE6,
+        A400: #FFFFFF,
+        A700: #000000,
+        contrast: (
+                50: $black-87-opacity,
+                100: $black-87-opacity,
+                200: $black-87-opacity,
+                300: $black-87-opacity,
+                400: $black-87-opacity,
+                500: white,
+                600: white,
+                700: white,
+                800: white,
+                900: $white-87-opacity,
+                A100: $black-87-opacity,
+                A200: $black-87-opacity,
+                A400: $black-87-opacity,
+                A700: $black-87-opacity,
+        )
+);
+
+$starter-accent-colors: (
+        50: #e0f7fa,
+        100: #b2ebf2,
+        200: #80deea,
+        300: #37DDE6,
+        400: #5AC5C5,
+        500: #00C2CC,
+        600: #18C3F2,
+        700: #05B5E6,
+        800: #02A3D1,
+        900: #006A6B,
+        A100: #009999,
+        A200: #00AAD9,
+        A400: #00C2CC,
+        A700: #006A6B,
+        contrast: (
+                50: $black-87-opacity,
+                100: $black-87-opacity,
+                200: $black-87-opacity,
+                300: $black-87-opacity,
+                400: $black-87-opacity,
+                500: white,
+                600: white,
+                700: white,
+                800: white,
+                900: $white-87-opacity,
+                A100: $black-87-opacity,
+                A200: $black-87-opacity,
+                A400: $black-87-opacity,
+                A700: $black-87-opacity,
+        )
+);
+
+$starter-warn-colors: (
+        50: #fce4ec,
+        100: #f8bbd0,
+        200: #f48fb1,
+        300: #f06292,
+        400: #ec407a,
+        500: #D14C7B,
+        600: #d81b60,
+        700: #c2185b,
+        800: #ad1457,
+        900: #880e4f,
+        A100: #01D485, // TODO: check if this color changes break the animations
+        A200: #F0BF6E,
+        A400: #D14C7B,
+        A700: #55A0B9,
+        contrast: (
+                50: $black-87-opacity,
+                100: $black-87-opacity,
+                200: $black-87-opacity,
+                300: $black-87-opacity,
+                400: $black-87-opacity,
+                500: white,
+                600: white,
+                700: $white-87-opacity,
+                800: $white-87-opacity,
+                900: $white-87-opacity,
+                A100: $black-87-opacity,
+                A200: white,
+                A400: white,
+                A700: white,
+        )
+);
+
+$primary-palette: mat-palette($starter-primary-colors, 400);
+$accent-palette: mat-palette($starter-accent-colors);
+$warn-palette: mat-palette($starter-warn-colors);
+
+$theme: mat-light-theme($primary-palette, $accent-palette, $warn-palette);
+
+.starter-theme {
+  @include angular-material-theme($theme);
+}
+
+// Include theme-dependent styles for custom components
+@include starter-components-theme($theme);

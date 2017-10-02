@@ -1,0 +1,39 @@
+<div class="header-container">
+
+  <div class="results-counter-container">
+    <span class="number-of-results">{{numOfResults}}</span>
+    <span class="data-name">{{dataName}}</span>
+  </div>
+
+
+  <div class="search-area-container">
+
+    <div class="search-bar-container">
+      <app-search-bar (onSearch)="search($event)"></app-search-bar>
+    </div>
+
+    <ng-container *ngIf="headerDefinition">
+      <div class="criteria-selector-container">
+        <label for="filter-select" i18n="Filter by tag in tables@@filterBy" class="filter-label">Filter by</label>
+        <select class="filter-select" id="filter-select" (change)="onCriteriaSelected($event.target.value)">
+          <option *ngFor="let criteria of headerDefinition.criterias"
+                  [value]="criteria.key"
+                  [selected]="criteria.key === headerDefinition.baseCriteria">
+            {{criteria.displayOption}}
+          </option>
+        </select>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="!headerDefinition">
+      <div class="criteria-selector-container">
+        <button md-button (click)="toggleFilter()" class="toggle-filter-button medium">
+          <i class="hm-icon-filter filter-icon" mdPrefix></i>
+          {{buttonText}}
+        </button>
+      </div>
+    </ng-container>
+
+  </div>
+
+</div>

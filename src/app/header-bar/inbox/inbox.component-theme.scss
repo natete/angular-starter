@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+
+@mixin inbox-component($theme) {
+
+  $primaryPalette: map-get($theme, primary);
+  $accentPalette: map-get($theme, accent);
+
+  .inbox-container {
+    .inbox-badge {
+      background: mat-color($accentPalette, default);
+      color: mat-color($primaryPalette, default);
+    }
+  }
+}
